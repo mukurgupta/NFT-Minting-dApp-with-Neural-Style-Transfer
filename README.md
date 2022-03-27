@@ -1,22 +1,62 @@
-# NFT School examples
-
-> Example projects and code snippets for nftschool.dev
-
-This is the home for code that's referenced in the guides and tutorials at [NFT School](https://nftschool.dev). NFT School is an open-source educational resource and community dedicated to building new experiences around non-fungible tokens.
+# Neural Styled NFT Minter: NFT Minting DdApp with Neural Style Transfer
 
 ## Example Projects
 
-NFT School is just getting started, so check back for more examples soon!
+Neural Styled NFT Minter can generate and deploy NFTs using Deep Learning based Neural Style Transfer to enable computer generated creative art pieces
 
-### End-to-end experience
 
-Check out [end-to-end](./end-to-end) for an example of minting NFTs from a web browser, using [nft.storage](https://nft.storage) to store NFT data on [IPFS](https://ipfs.io) and [Filecoin](https://filecoin.io).
+## How to run the Code 
 
-See the guide at https://nftschool.dev/tutorial/end-to-end-experience/
+### Dependencies
+- Frontend: npm, yarn
+- Backend: Python (tensorflow, tensorflow_hub, flask, PIL)
+- Other services used: nft.storage, IPFS, hardhat
 
-### Lazy Minting
 
-The [lazy-minting](./lazy-minting/) directory contains an example of minting NFTs at the time of first sale. This works by redeeming a signed "voucher" issued by the NFT creator.
+### Running the dApp
+- Install the dependencies
+- Get the API key from https://nft.storage/ and store that in end-to-end/packages/react-app/src/constants.js
+- Cd into the NFT-Minting-dApp-with-Neural-Style-Transfer
 
-See the guide at https://nftschool.dev/how-to/lazy-minting/
+    ``` cd <path-to-NFT-Minting-dApp-with-Neural-Style-Transfer>
+    ```
+- Download the Neural Style Transfer Model from TfHub(https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256) and add the path to local directory in neural_style_transfer_api.py
+- Run the backend flask API
+    ``` python neural_style_transfer_api.py
+    ```
+- Cd into end-to-end:
 
+    ``` cd end-to-end
+    ```
+
+- Install Frontend modules using npm:
+
+    ``` yarn install
+    ```
+
+- Start local devnet:
+
+    ``` yarn chain
+    ```
+- Open different terminal to deploy the smart contract:
+
+    ``` yarn deploy
+    ```
+- After smart contract deployment, run the UI:
+
+    ``` yarn start
+    ```  
+
+
+### Usage
+- Add ethers to the dummy account by clicking on "Grab Funds from the Faucet" on the UI.
+- Add the content and the style image.
+- Add NFT name and click on "Mint" button to add the generated image to IPFS and store IPFS URI on devnet. Note the token ID.
+- Use the token ID to view the generated NFT in the "View an NFT" tab.
+
+
+## References
+- InterPlanetary File System (https://ipfs.io/)
+- NFT.STORAGE (https://nft.storage/)
+- scaffold-eth (https://github.com/scaffold-eth/scaffold-eth)
+- Neural Style Transfer (https://arxiv.org/pdf/1508.06576.pdf)
