@@ -1,6 +1,6 @@
-# Neural Styled NFT Minter: NFT Minting DdApp with Neural Style Transfer
+# Neural Styled NFT Minter
+## NFT Minting DdApp with Neural Style Transfer
 
-## Example Projects
 
 Neural Styled NFT Minter can generate and deploy NFTs using Deep Learning based Neural Style Transfer to enable computer generated creative art pieces
 
@@ -8,43 +8,56 @@ Neural Styled NFT Minter can generate and deploy NFTs using Deep Learning based 
 ## How to run the Code 
 
 ### Dependencies
-- Frontend: npm, yarn
-- Backend: Python (tensorflow, tensorflow_hub, flask, PIL)
-- Other services used: nft.storage, IPFS, hardhat
-
+- Frontend: [node.js](https://nodejs.org/en/), [yarn](https://yarnpkg.com/)
+- Backend: Python libraries:
+    ``` 
+    tensorflow
+    tensorflow_hub
+    flask
+    flask_cors
+    Pillow
+    ```
+- Other services used: [NFT.STORAGE](https://nft.storage/), [InterPlanetary File System](https://ipfs.io/), [hardhat](https://hardhat.org/), 
 
 ### Running the dApp
 - Install the dependencies
-- Get the API key from https://nft.storage/ and store that in end-to-end/packages/react-app/src/constants.js
+- Get the API key from [NFT.STORAGE](https://nft.storage/) and store that in end-to-end/packages/react-app/src/constants.js
 - Cd into the NFT-Minting-dApp-with-Neural-Style-Transfer
 
-    ``` cd <path-to-NFT-Minting-dApp-with-Neural-Style-Transfer>
+    ``` 
+    cd <path-to-NFT-Minting-dApp-with-Neural-Style-Transfer>
     ```
-- Download the Neural Style Transfer Model from TfHub(https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256) and add the path to local directory in neural_style_transfer_api.py
+- Download the Neural Style Transfer Model from [TensorFlow Hub](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256) and add the path to local directory in neural_style_transfer_api.py
 - Run the backend flask API
-    ``` python neural_style_transfer_api.py
+    ```
+    python neural_style_transfer_api.py
     ```
 - Cd into end-to-end:
 
-    ``` cd end-to-end
+    ``` 
+    cd end-to-end
     ```
 
 - Install Frontend modules using npm:
 
-    ``` yarn install
+    ``` 
+    yarn install
     ```
 
 - Start local devnet:
 
-    ``` yarn chain
+    ``` 
+    yarn chain
     ```
 - Open different terminal to deploy the smart contract:
 
-    ``` yarn deploy
+    ``` 
+    yarn deploy
     ```
 - After smart contract deployment, run the UI:
 
-    ``` yarn start
+    ``` 
+    yarn start
     ```  
 
 
@@ -56,7 +69,8 @@ Neural Styled NFT Minter can generate and deploy NFTs using Deep Learning based 
 
 
 ## References
-- InterPlanetary File System (https://ipfs.io/)
-- NFT.STORAGE (https://nft.storage/)
-- scaffold-eth (https://github.com/scaffold-eth/scaffold-eth)
-- Neural Style Transfer (https://arxiv.org/pdf/1508.06576.pdf)
+- [InterPlanetary File System](https://ipfs.io/)
+- [NFT.STORAGE](https://nft.storage/)
+- [scaffold-eth](https://github.com/scaffold-eth/scaffold-eth)
+- [web3js](https://web3js.readthedocs.io/en/v1.7.1/)
+- [Neural Style Transfer](https://arxiv.org/pdf/1508.06576.pdf)
