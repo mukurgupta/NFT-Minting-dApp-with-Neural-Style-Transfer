@@ -5,9 +5,9 @@ import React from "react";
 
 export default function Header() {
   return (
-    <a href="https://nftschool.dev" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/mukurgupta/NFT-Minting-dApp-with-Neural-Style-Transfer" target="_blank" rel="noopener noreferrer">
       <PageHeader
-        title="🎟 NFT School e2e example"
+        title="NFT Minting dApp with Neural Style Transfer"
         subTitle="join us at nftschool.dev"
         style={{ cursor: "pointer" }}
       />
