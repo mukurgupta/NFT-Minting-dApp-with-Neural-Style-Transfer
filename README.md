@@ -22,29 +22,21 @@ Neural Styled NFT Minter can generate and deploy NFTs using Deep Learning based 
 ### Running the dApp
 - Install the dependencies
 - Get the API key from [NFT.STORAGE](https://nft.storage/) and store that in end-to-end/packages/react-app/src/constants.js
-- Cd into the NFT-Minting-dApp-with-Neural-Style-Transfer
-
-    ``` 
-    cd <path-to-NFT-Minting-dApp-with-Neural-Style-Transfer>
-    ```
 - Download the Neural Style Transfer Model from [TensorFlow Hub](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256) and add the path to local directory in neural_style_transfer_api.py
 - Run the backend flask API
     ```
+    cd <path-to-NFT-Minting-dApp-with-Neural-Style-Transfer>
     python neural_style_transfer_api.py
-    ```
-- Cd into end-to-end:
-
-    ``` 
-    cd end-to-end
     ```
 
 - Install Frontend modules using npm:
 
     ``` 
+    cd end-to-end
     yarn install
     ```
 
-- Start local devnet:
+- Start local hardhat devnet:
 
     ``` 
     yarn chain
