@@ -1,8 +1,8 @@
 # Neural Styled NFT Minter
-## NFT Minting DdApp with Neural Style Transfer
+## NFT Minting dApp with Neural Style Transfer
 
 
-Neural Styled NFT Minter can generate and deploy NFTs using Deep Learning based Neural Style Transfer to enable computer generated creative art pieces
+Neural Styled NFT Minter can generate and deploy NFTs on blockchain using Deep Learning based Neural Style Transfer to enable computer generated creative art pieces
 
 
 ## How to run the Code 
